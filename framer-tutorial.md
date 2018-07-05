@@ -28,6 +28,7 @@ page = new PageComponent
     x: Align.center
       y: Align.center
         width: 1190
+#width: Framer.Device.screen.width
           height: 1700
             borderRadius: 6
               scrollHorizontal: false
@@ -39,13 +40,13 @@ for i in [0...10]
         width: Framer.Device.screen.width
             height: 750
                 parent: page.content
-                    name: "Page #{i}"
+                    name: "Page #{i}@D"
                         y: 810 * i
                             backgroundColor: "#00AAFF"
                                 borderRadius: 6
 
 # Style current page
-# content.currentPage.backgroundColor = "#FFF"
+# page.currentPage.backgroundColor = "#FFF"
 
 # Fade in the most centered page
 page.onChange "currentPage", ->
